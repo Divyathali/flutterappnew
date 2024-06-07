@@ -1,0 +1,9 @@
+return MouseRegion(
+  onEnter: (_) => setState(() => _isMouseOver = true),
+  onExit: (_) => setState(() => _isMouseOver = false),
+  onHover: (e) => print(e.localPosition),
+  child: Container(
+    height: 500,
+    color: _isMouseOver ? Colors.blue : Colors.black,
+  ),
+);
